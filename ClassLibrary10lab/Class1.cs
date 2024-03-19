@@ -48,6 +48,10 @@ namespace ClassLibrary10lab
         {
             return Name.CompareTo(other.Name);
         }
+        public override int GetHashCode()
+{
+    return Name.GetHashCode();
+}
     }
 
 }
