@@ -60,6 +60,18 @@ namespace ClassLibrary10lab
             Guitar other = (Guitar)obj;
             return NumberOfStrings == other.NumberOfStrings;
         }
+         public MusicalInstrument GetBase(Guitar g)
+ {
+     return new MusicalInstrument(g.Name);
+ }
+ public object Clone()
+ {
+     return new Guitar(Name, NumberOfStrings);
+ }
+ public override int GetHashCode()
+ {
+     return base.GetHashCode();
+ }
     }
 
 }
